@@ -49,6 +49,9 @@ def stocGradAscent0(dataMatrix, classLabels):
         print array(dataMatrix[i])
         print weights
         print type(weights)
+        '''
+        dataMatrix[i]为List类型，不能直接进行乘法运算，假如a是一个List类型，那么2*a的结果是将a复制一份
+        '''
         weights = weights + alpha * error * array(dataMatrix[i])
     return weights
 
